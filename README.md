@@ -1,5 +1,7 @@
 # Quirkbot Windows Drivers Installer
 
+Quirkbot board requires a driver for Windows 7 and 8.1. This repository contains the driver files and source to build an installer/wizard to install those drivers.
+
 ## Build instructions (Windows)
 
 - Downdload and install [NSIS](http://nsis.sourceforge.net/Download) (verison `3.0b3`).
