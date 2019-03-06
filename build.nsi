@@ -74,11 +74,11 @@ Section "Install a Driver" InstDriver
         File /r drivers\*
 
         ${if} ${RunningX64}
-            ExecWait '"$TEMP\dpinst-amd64.exe" /u old1000\quirkbot.inf /S' $1
+            ExecWait '"$TEMP\dpinst-amd64.exe" /u quirkbot.inf /S' $1
             DetailPrint "Uninstall: $1"
             ExecWait '"$TEMP\dpinst-amd64.exe" /sw' $1
         ${Else}
-            ExecWait '"$TEMP\dpinst-x86.exe" /u old1000\quirkbot.inf /S' $1
+            ExecWait '"$TEMP\dpinst-x86.exe" /u quirkbot.inf /S' $1
             DetailPrint "Uninstall: $1"
             ExecWait '"$TEMP\dpinst-x86.exe" /sw' $1
         ${EndIf}
