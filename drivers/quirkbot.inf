@@ -16,7 +16,9 @@ Signature="$Windows NT$"
 Provider=%ManufacturerName%
 DriverPackageDisplayName=%DriverPackageDisplayName%
 CatalogFile=quirkbot.cat
-DriverVer=03/23/2016, 2.0.0.0
+CatalogFile.ntx86=quirkbotX86.cat
+CatalogFile.ntamd64=quirkbotX64.cat
+DriverVer=03/06/2019, 3.0.0.0
 
 [Manufacturer]
 %ManufacturerName%=DeviceList, NTamd64, NTia64
