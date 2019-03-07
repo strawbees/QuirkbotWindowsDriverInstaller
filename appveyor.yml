@@ -1,6 +1,11 @@
 platform:
   - x86
 
+branches:
+  only:
+    - master
+    - develop
+
 install:
   - cinst -y nsis
   - SET PATH=C:\Program Files\NSIS\;C:\Program Files (x86)\NSIS\;%PATH%
@@ -9,14 +14,8 @@ install:
   - ps: Move-Item .\UAC\Plugins\x86-unicode\UAC.dll 'C:\Program Files (x86)\NSIS\Plugins\x86-unicode\UAC.dll'
   - ps: Move-Item .\UAC\UAC.nsh 'C:\Program Files (x86)\NSIS\Include\UAC.nsh'
 
-# defined specific build configs for different branches
-for:
--
-  branches:
-    only:
-      - feature/automatic-build
-  build_script:
-    - cmd: makensis build.nsi
+build_script:
+- cmd: makensis build.nsi
 
 artifacts:
   - path: .\*.exe
