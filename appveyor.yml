@@ -20,7 +20,7 @@ for:
 
 artifacts:
   - path: .\*.exe
-    name: build
+    name: QuirkbotDriverInstaller
 
 version: "{build}"
 

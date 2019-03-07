@@ -8,13 +8,14 @@
 ;General
     RequestExecutionLevel user
     Name "Quirkbot drivers installation"
-    OutFile "Quirkbot-Windows-Drivers-Installer.exe"
-    InstallDir "$TEMP\quirkbot"
 
     !define CAPTION "Quirkbot drivers installation"
-    !define VERSION "1.0.0.1"
+    !define VERSION "2.0.0"
     !define APP_NAME "Quirkbot"
     !define EXECUTABLE_NAME "Quirkbot-Windows-Drivers-Installer.exe"
+
+    InstallDir "$TEMP\quirkbot"
+    OutFile "Quirkbot-Windows-Drivers-Installer-v${VERSION}.exe"
 
     Caption "${CAPTION}"
     VIProductVersion "${VERSION}"
