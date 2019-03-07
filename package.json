@@ -1,7 +1,0 @@
-{
-	"name": "quirkbot-driver",
-	"version" : "0.1.0",
-	"description" : "Windows drivers installers",
-	"homepage" : "https://github.com/strawbees/quirkbot-driver",
-	"license" : "MIT"
-}
