@@ -10,7 +10,7 @@
     Name "Quirkbot drivers installation"
 
     !define CAPTION "Quirkbot drivers installation"
-    !define VERSION "2.0.0"
+    !define VERSION "2.0.0.0"
     !define APP_NAME "Quirkbot"
     !define EXECUTABLE_NAME "Quirkbot-Windows-Drivers-Installer.exe"
 
