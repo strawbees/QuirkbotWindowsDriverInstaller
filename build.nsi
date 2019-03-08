@@ -8,13 +8,14 @@
 ;General
     RequestExecutionLevel user
     Name "Quirkbot drivers installation"
-    OutFile "Quirkbot-Windows-Drivers-Installer.exe"
-    InstallDir "$TEMP\quirkbot"
 
     !define CAPTION "Quirkbot drivers installation"
-    !define VERSION "1.0.0.1"
+    !define VERSION "2.0.0.0"
     !define APP_NAME "Quirkbot"
     !define EXECUTABLE_NAME "Quirkbot-Windows-Drivers-Installer.exe"
+
+    InstallDir "$TEMP\quirkbot"
+    OutFile "Quirkbot-Windows-Drivers-Installer-v${VERSION}.exe"
 
     Caption "${CAPTION}"
     VIProductVersion "${VERSION}"
@@ -74,11 +75,11 @@ Section "Install a Driver" InstDriver
         File /r drivers\*
 
         ${if} ${RunningX64}
-            ExecWait '"$TEMP\dpinst-amd64.exe" /u old1000\quirkbot.inf /S' $1
+            ExecWait '"$TEMP\dpinst-amd64.exe" /u quirkbot.inf /S' $1
             DetailPrint "Uninstall: $1"
             ExecWait '"$TEMP\dpinst-amd64.exe" /sw' $1
         ${Else}
-            ExecWait '"$TEMP\dpinst-x86.exe" /u old1000\quirkbot.inf /S' $1
+            ExecWait '"$TEMP\dpinst-x86.exe" /u quirkbot.inf /S' $1
             DetailPrint "Uninstall: $1"
             ExecWait '"$TEMP\dpinst-x86.exe" /sw' $1
         ${EndIf}
